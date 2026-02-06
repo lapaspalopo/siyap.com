@@ -1,0 +1,175 @@
+/* RESET DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url("img/bg.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+
+.overlay {
+    min-height: 100vh;
+    padding: 20px;
+
+    /* blur lebih lembut */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    /* overlay dibuat lebih terang */
+    background: rgba(8, 28, 58, 0.25);
+
+}
+
+
+/* HEADER */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header .logo {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+header .logo img {
+    height: 70px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    line-height: 1.4;
+}
+
+/* MENU CARD */
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 25px 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.card i {
+    font-size: 35px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.card a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    display: block;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+
+/* FOOTER */
+footer {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+footer a,
+footer i {
+    color: #fff;
+    font-size: 28px;
+    transition: 0.3s;
+}
+
+footer a:hover,
+footer i:hover {
+    color: #ffd700;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* TABLET */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 0.85rem;
+    }
+
+    header .logo img {
+        height: 60px;
+    }
+}
+
+/* HP */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.8rem;
+    }
+
+    .card {
+        padding: 20px 10px;
+    }
+
+    .card i {
+        font-size: 30px;
+    }
+
+    footer {
+        gap: 18px;
+    }
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+    .menu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* HP */
+@media (max-width: 480px) {
+    .menu {
+        grid-template-columns: 1fr;
+    }
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
